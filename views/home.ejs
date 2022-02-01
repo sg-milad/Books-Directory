@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+  </head>
+  <body>
+    <h1>book</h1>
+    <a href="/creatbooks">creat book </a>
+    <hr />
+    <div>
+      <% if(post.length>0){ %> <%for (let posts of post) {%>
+      <div style="border: solid 1px black">
+        <h2>name: <%=posts.name %></h2>
+        <h4>author: <%=posts.author %></h4>
+        <h4>captipn: <%=posts.caption %></h4>
+        <a href="/deletepost/<%=posts._id %>"> delet post </a>
+        <br />
+        <br />
+        <a href="/editpost/<%=posts._id %>"> edit post </a>
+      </div>
+      <% }}else{ %>
+      <div>
+        <h1>nothing</h1>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
